@@ -1,0 +1,10 @@
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-04-* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-05-* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-06-* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-07-* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-08-* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-09-* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-10-* .
+#cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-11-* .
+#cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2018-12-* .
+#cp /import/AKWATERS/kshedstrom/Arctic4/run16/averages/arctic4_avg_2019-01-* .

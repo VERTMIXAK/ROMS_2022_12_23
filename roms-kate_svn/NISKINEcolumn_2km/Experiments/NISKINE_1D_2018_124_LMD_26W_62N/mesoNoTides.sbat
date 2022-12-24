@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --partition=t2standard
+#SBATCH --ntasks=1
+#SBATCH --mail-user=jgpender@alaska.edu
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --time=01:00:00
+#SBATCH --output=roms.%j
+source ~/.runROMSintel
+ulimit -l unlimited
+ulimit -s unlimited
+/bin/rm -r  netcdfOutput log nodes.* roms.*
+mkdir netcdfOutput
+NRREC=`grep NRREC Apps/ocean_niskine.in | grep -v ! | cut -d "=" -f2 | cut -c 2`
+if [ $NRREC != "0" ]; then
+	lastData=`grep ININAME Apps/ocean_niskine.in | grep -v ! | rev | cut -d / -f2 | rev`
+	cp $lastData/*rst.nc netcdfOutput
+    cp $lastData/*flt.nc netcdfOutput
+	ROI=`find Apps -name *.in | rev | cut -d . -f2 | cut -d _ -f1 |rev`
+	dum="_rst.nc"
+	sed -i "s/floats_$ROI.in/floats_$ROI$dum/" Apps/ocean_$ROI.in
+fi
+mpirun -np 1  romsM ./Apps/ocean_niskinecolumn.in > log
+bash ../../../addl_Scripts/timeROMS/getRunTime.bash >> log

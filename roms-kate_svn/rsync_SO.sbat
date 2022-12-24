@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#SBATCH --partition=t2standard
+#SBATCH --ntasks=1
+#SBATCH --mail-user=jgpender@alaska.edu
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --time=48:00:00
+#SBATCH --output=roms.%j
+source ~/.runROMSintel
+ulimit -l unlimited
+ulimit -s unlimited
+
+
+
+DEST=/import/VERTMIXFS/jgpender/roms-kate_svn
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/SO_1km
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh" 			\
+	--rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/SO_2km  
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/SO_4km  
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+

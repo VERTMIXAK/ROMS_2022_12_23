@@ -1,0 +1,10 @@
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_04* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_05* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_06* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_07* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_08* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_09* .
+cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_10* .
+#cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_11* .
+#cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2018_12* .
+#cp /import/AKWATERS/kshedstrom/Arctic4/run16/months/arctic4_2019_01* .

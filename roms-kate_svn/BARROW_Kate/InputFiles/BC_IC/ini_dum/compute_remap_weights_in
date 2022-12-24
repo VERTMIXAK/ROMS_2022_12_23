@@ -1,0 +1,18 @@
+&remap_inputs
+    num_maps = 1
+    grid1_file = 'remap_grid_ARCTIC4_rho.nc'
+    grid2_file = 'remap_grid_BARROW_Kate_rho.nc'
+    interp_file1 = 'remap_weights_ARCTIC4_to_BARROW_Kate_bilinear_rho_to_rho.nc'
+    interp_file2 = 'remap_weights_BARROW_Kate_to_ARCTIC4_bilinear_rho_to_rho.nc'
+    map1_name = 'ARCTIC4 to BARROW_Kate Bilinear Mapping'
+    map2_name = 'BARROW_Kate to ARCTIC4 Bilinear Mapping'
+    map_method = 'bilinear'
+    normalize_opt = 'fracarea'
+    output_opt = 'scrip'
+    restrict_type = 'latitude'
+    num_srch_bins = 90
+    luse_grid1_area = .false.
+    luse_grid2_area = .false.
+    grid1_periodic = .false.
+    grid2_periodic = .false.
+/

@@ -1,0 +1,43 @@
+module purge
+
+module load sintr
+
+#module load openmpi/intel/1.10
+#module load data/netCDF/4.4.1.1-pic-intel-2016b
+module load data/HDF/4.2.11-pic-intel-2016b
+module load slurm
+
+module load data/netCDF/4.4.1.1-pic-intel-2016b
+module load data/netCDF-Fortran/4.4.4-pic-intel-2016b
+
+module load totalview
+module load matlab/R2013a
+#module load python/anaconda2-2.5.0
+
+export PATH=$PATH\:~/bin:.
+
+#export LD_LIBRARY_PATH=$HOME/Python/lib:$LD_LIBRARY_PATH
+#export PYTHONPATH=$HOME/Python/lib/python3.5/site-packages:$HOME/Python
+export LD_LIBRARY_PATH=$HOME/PyCNAL_fromKate/site-packages:$LD_LIBRARY_PATH
+#export PYTHONPATH=$HOME/Python/lib/python3.5/site-packages:$HOME/Python
+
+export ARCHIVE2=/import/VERTMIXFS/jgpender
+
+export PYCNAL_GRIDID_FILE=$HOME/Python/gridid.txt
+export PYCNAL_GRID_FILE=$HOME/Python/gridid.txt
+export PYCNAL_PATH=$HOME/Python
+export XCOASTDATA=/import/c1/VERTMIX/jgpender/ROMS/BathyData/world_int.cst
+export ETOPO2=/import/c1/VERTMIX/jgpender/ROMS/BathyData/etopo2.Gridpak.nc
+export TOPO30=/import/c1/VERTMIX/jgpender/ROMS/BathyData/topo30.Gridpak_TS.nc
+export TOPO30TS=/import/c1/VERTMIX/jgpender/ROMS/BathyData/topo30.Gridpak_TS.nc
+export INDIANO2=/import/c1/VERTMIX/jgpender/ROMS/BathyData/indiano2.Gridpak.nc
+export INDIANO3=/import/c1/VERTMIX/jgpender/ROMS/BathyData/indiano3.SRTM.Gridpak.nc
+export PALAU=/import/c1/VERTMIX/jgpender/ROMS/BathyData/Palau_Harper_gridpak.nc 
+export PALAU5=/import/VERTMIXFS/jgpender/ROMS/BathyData/Palau5_Harper_gridpak.nc
+export NISKINE=/import/c1/VERTMIX/jgpender/ROMS/BathyData/topo30.Gridpak_NISKINE.nc
+
+export PYROMS_PATH=$HOME/Python_pyroms
+
+umask 0027
+
+PS1="`echo $HOSTNAME`> "

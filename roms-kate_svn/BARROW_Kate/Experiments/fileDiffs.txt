@@ -1,0 +1,56 @@
+diff BARROW_Kate_fromKatesOriginals/Apps/ocean_barrow.in BARROW_Kate_recalculatedInput/Apps/ocean_barrow.in
+1013c1013
+
+
+
+
+
+<      ININAME == /center1/AKWATERS/kshedstrom/Barrow/Files/arctic4_avg_2018-08-31T_BARROW.nc
+---
+>      ININAME == ../../InputFiles/BC_IC/ini_243/arctic4_avg_2018-08-31T_BARROW_Kate.nc
+1053c1053
+
+verified identical
+
+
+
+
+<      CLMNAME == /center1/AKWATERS/kshedstrom/Barrow/Files/Barrow_CLM_2018.nc
+---
+>      CLMNAME == ../../InputFiles/BC_IC/Barrow_CLM_2018.nc
+1056,1057c1056,1057
+
+
+verified identical
+
+
+
+
+
+<      BRYNAME == /center1/AKWATERS/kshedstrom/Barrow/Files/Barrow_sea_bdry_2018.nc \
+<                 /center1/AKWATERS/kshedstrom/Barrow/Files/Barrow_ice_bdry_2018.nc
+---
+>      BRYNAME == ../../InputFiles/BC_IC/Barrow_sea_bdry_2018.nc \
+>                 ../../InputFiles/BC_IC/Barrow_ice_bdry_2018.nc
+1066c1066
+
+
+verified identical
+
+
+
+
+
+<      SSFNAME == /center1/AKWATERS/kshedstrom/Barrow/Files/JRA-1.4_Barrow_rivers_2018.nc
+---
+>      SSFNAME == ../../InputFiles/Runoff/JRA-1.4_Barrow_rivers_2018.nc
+1070c1070
+
+
+verified identical
+
+
+
+<     TIDENAME == /center1/AKWATERS/kshedstrom/Barrow/Files/Barrow_tides_otps.nc
+---
+>     TIDENAME == ../../InputFiles/Tides/Barrow_tides_otps.nc

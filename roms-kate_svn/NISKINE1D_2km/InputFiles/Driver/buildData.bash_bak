@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# get center coordinates for the experiment
+
+lat=`grep lat latlon.txt | cut -d '=' -f2 | cut -d '_' -f1`
+lon=`grep lon latlon.txt | cut -d '=' -f2 | cut -d '_' -f1`
+
+lon2=` expr 360 - $lon`
+#echo $lon2
+
+
+#echo $lat $lon
+location=`echo "_"$lon"W_"$lat"N"`
+#echo $location
+
+\rm -r ../Input$location
+mkdir ../Input$location
+
+cp NISKINE_grid_template.nc grid.nc
+
+matlab -nodisplay -nosplash <grid.m 
+mv ./grid.nc "../Input"$location"/grid"$location"_2km.nc"
+
+matlab -nodisplay -nosplash <ic.m
+mv ic.nc "../Input"$location"/IC"$location"_2km.nc"
+\rm CMEMS*

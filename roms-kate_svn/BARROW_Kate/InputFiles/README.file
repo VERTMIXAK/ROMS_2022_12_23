@@ -1,0 +1,37 @@
+Grid file
+
+ncdiff KatesInputFiles/grid_Barrow_1.nc 				/center1/AKWATERS/kshedstrom/Barrow/Files/grid_Barrow_1.nc dum.nc
+
+
+
+Tidal forcing file
+
+Do this "old school" using the ncl scripts
+
+ncdiff KatesInputFiles/Barrow_tides_otps.nc 			TidesAll/Barrow_tides_otps.nc 			dum.nc
+
+
+
+
+River forcing
+
+ncdiff KatesInputFiles/JRA-1.4_Barrow_rivers_2018.nc 	Runoff/JRA-1.4_Barrow_rivers_2018.nc 	dum.nc
+
+
+Ice edge forcing
+
+ncdiff KatesInputFiles/Barrow_ice_bdry_2018.nc    		BC_IC/Barrow_ice_bdry_2018.nc    		dum.nc
+
+
+"normal" edge forcing
+
+ncdiff KatesInputFiles/Barrow_sea_bdry_2018.nc          BC_IC/Barrow_sea_bdry_2018.nc           dum.nc
+
+
+
+CLM forcing
+
+ncdiff KatesInputFiles/Barrow_CLM_2018.nc          		BC_IC/Barrow_CLM_2018.nc              	dum.nc
+
+
+Barrow_CLM_2018.nc

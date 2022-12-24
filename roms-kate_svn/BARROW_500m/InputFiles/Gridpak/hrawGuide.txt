@@ -1,0 +1,8 @@
+1)	original bathymetry
+2)	thresholded
+3)	run bathsuds
+4)	run bathsoap
+5) 	smoo 9
+6)	smoo 20
+7)	smoo 30
+

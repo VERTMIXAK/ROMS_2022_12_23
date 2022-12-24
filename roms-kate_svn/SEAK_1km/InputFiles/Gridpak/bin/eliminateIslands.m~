@@ -1,0 +1,14 @@
+gridFile = 'SEAK_1km.nc';
+
+mask = nc_varget(gridFile,'mask_rho');
+
+fig(1);clf;
+pcolor(mask);shading flat;colorbar
+
+
+mask(200:300,120:end) = 1;
+mask(300:370,150:end) = 1;
+mask(370:390,320:440) = 1;
+
+fig(2);clf;
+pcolor(mask);shading flat;colorbar

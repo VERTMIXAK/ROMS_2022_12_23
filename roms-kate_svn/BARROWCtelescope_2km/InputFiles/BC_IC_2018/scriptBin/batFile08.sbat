@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --partition=t2small
+#SBATCH --ntasks=1
+#SBATCH --mail-user=jgpender@alaska.edu
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --time=16:00:00
+#SBATCH --output=temp.%j
+
+source ~/.runPycnal
+
+python make_bdry_file_pool_08.py  
+

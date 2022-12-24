@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --partition=t2standard
+#SBATCH --ntasks=1
+#SBATCH --mail-user=jgpender@alaska.edu
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --time=01:00:00
+#SBATCH --output=roms.%j
+source ~/.runROMSintel
+module unload lib/zlib/1.2.8-pic-intel-2016b
+
+matlab -nosplash <forRCS.m

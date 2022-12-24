@@ -1,0 +1,2 @@
+Edit latlon.txt for location and date, then run buildData.bash. 
+The new data will appear in its own directory one click up.

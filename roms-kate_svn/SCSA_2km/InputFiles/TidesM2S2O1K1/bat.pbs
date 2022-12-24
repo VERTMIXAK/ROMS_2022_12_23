@@ -1,0 +1,17 @@
+#!/bin/csh
+#PBS -q standard_4
+#PBS -l walltime=05:00:00
+#PBS -l nodes=1:ppn=4
+#PBS -j oe
+
+source ~/.ROMStools
+
+set echo
+cd $PBS_O_WORKDIR
+
+echo $PBS_O_WORKDIR
+
+#source ~/ROMStcshrc
+
+ncl tide_file.ncl
+ncl otps.ncl

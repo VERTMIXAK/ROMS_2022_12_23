@@ -1,0 +1,96 @@
+#!/bin/bash
+
+#SBATCH --partition=t2small
+#SBATCH --ntasks=1
+#SBATCH --mail-user=jgpender@alaska.edu
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --time=48:00:00
+#SBATCH --output=roms.%j
+source ~/.runROMSintel
+ulimit -l unlimited
+ulimit -s unlimited
+
+
+
+DEST=/import/VERTMIXFS/jgpender/roms-kate_svn
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROW_1km
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh" 			\
+	--rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROW_2km
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROW_500m
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROWB_1km
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROWB_2km
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROWB_500m
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROWCtelescope_2km
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROW_Kate
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/BARROWtelescope_2km
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+
+
+
+SRC=/import/c1/VERTMIX/jgpender/roms-kate_svn/Apps
+
+rsync  -P -v -r -a --rsh="/usr/bin/rsh"             \
+    --rsync-path=/usr/local/bin/rsync $SRC $DEST  > myRsync.log
+
+

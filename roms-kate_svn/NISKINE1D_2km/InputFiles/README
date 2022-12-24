@@ -1,0 +1,8 @@
+The first thing you need is a template grid file. The number of x/y points is always the same, so this only needs to be
+done once.
+
+The next thing you need is a template HIS file, which depends on the number of layers. Keep the basic file structure by
+creating a BC_IC directory, which contains and ini directory with the python scripts that create the IC file. These scripts
+refer to an entry in
+	~/Python/gridid.txt
+and can have any stretching and Nz you want.

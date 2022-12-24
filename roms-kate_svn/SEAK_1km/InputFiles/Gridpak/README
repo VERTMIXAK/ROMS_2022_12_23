@@ -1,0 +1,31 @@
+1) First of all, change the minimum depth in bathtub from 5 to 50.
+
+/*
+
+2) Use the modified topo source file which has
+	a) the latitude field is shifted a smidgie
+	b) each bathy point is replaced with a 3x3 nanmean
+
+
+If you look in the modifiedTopo30 directory you see two copies of the topo30 source file, both of which differ from
+the original in
+	ROMS/BathyData
+The latitude field is shifted a smidge (.01 deg) in both. One of the files
+
+topo30.Gridpak_SEAK_shiftSmooth.nc
+
+also has some smoothing - a nanmean of the 3x3 box of points surrounding each bathymetry point not under the land mask.
+
+If you do an ncdiff of these two files you see the (subtle) difference.
+
+
+
+3) get rid of potholes with a simple 3x3 nanmean
+
+*/
+
+2) run Harper's hls_butterworth script on minimum -    1/3
+
+3) run bathsuds with 3 iterations
+
+4) run bathsoap with 1 iteration
